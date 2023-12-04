@@ -28,7 +28,7 @@ The following animation shows the web application's appearance and functionality
 ![portfolio demo](./images/01-css-challenge-demo.gif)
 
 Feel free to use your own colors and images.
-
+![Alt text](image.png)
 ## Grading Requirements
 
 This challenge is graded based on the following criteria: 
