@@ -1,6 +1,7 @@
 :root{
   --main-color: rgb(62, 60, 60);
   --sec-color: rgb(180, 175, 209);
+  --transparent-box: rgba(5, 242, 246, 0.5);
 }
 
 * {
@@ -39,11 +40,15 @@ header{
   color: var(--sec-color);
 }
 
-li{
+#nav-list li{
   list-style-type: none;
   border-bottom: 3px solid;
   padding-right: 10px;
   padding-left: 10px;
+}
+#nav-list li a{
+  color: var(--sec-color);
+  text-decoration: none;
 }
 
 #logo{
@@ -88,6 +93,7 @@ li{
   text-align: end;
   padding: 10px;
   padding-top: 0px;
+  margin-right: 20px;
   font-size: 36px;
 }
 
@@ -99,4 +105,102 @@ li{
 #main_grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  flex-grow: 1;
+  grid-template-areas: 
+  "Surf Surf";
+}
+
+figure{
+  border: solid 4px var(--sec-color);
+  display: flex;
+  align-items: end;
+  height: 20em;
+  background-size: 100%;
+  margin: 15px;
+
+}
+
+#main_grid div{
+  display: inline-block;
+  background-color: var(--sec-color);
+  padding: 20px;
+  margin-bottom: 15px;
+
+  
+}
+
+#Surf{
+  background-image: url(../images/02-portfolio-4.jpg);
+  grid-area: Surf;
+  
+}
+
+#LED{
+  background-image: url(../images/02-portfolio-1.jpg);
+}
+
+#Calc{
+  background-image: url(../images/02-portfolio-2.jpg);
+}
+
+#Puzzle{
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+
+#Run{
+  background-image: url(../images/02-run-buddy.jpg);
+}
+
+figure:hover{
+  scale: 1.1;
+}
+
+/* Contact section */
+
+#contact-list{
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--sec-color);
+}
+
+#contact-list li{
+  list-style-type: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+  border-bottom: solid 3px;
+}
+
+#contact-list li:hover{
+  color:blue;
+}
+
+@media only screen and (max-width: 768px){
+
+  #main_grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-grow: 1;
+    grid-template-areas: 
+    "Surf";
+  }
+
+nav{
+  margin: auto;
+}
+
+#contact-list{
+  flex-direction: column;
+  gap:10px
+}
+
+}
+
+@media only screen and (max-width: 1024px){
+  #contact-list{
+    flex-direction: column;
+    gap:10px
+  }
 }
